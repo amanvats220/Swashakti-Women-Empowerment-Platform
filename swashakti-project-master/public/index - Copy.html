@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Swashakti - Empowering Women Entrepreneurs</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .feature-cards-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap:30px;}
+    .feature-card {
+      background:#072e2e43; border-radius:17px; box-shadow:0 4px 18px #7657a833;
+      padding:28px 21px; text-align:center;
+      transition:box-shadow .22s,transform .19s;
+      position:relative; overflow:hidden;
+    }
+    .feature-card:hover {
+      box-shadow:0 8px 32px #480d4566,0 2px 18px rgba(39, 6, 6, 0.133);
+      transform:scale(1.09) translateY(-8px);
+      z-index:1;
+    }
+    .feature-card img {
+      width:70px; margin-bottom:14px;
+      background:#696d36; border-radius:14px; padding:11px;
+      box-shadow:0 3px 14px #d919566a;
+      filter:drop-shadow(0 1px 10px #fff7);
+      border:3px solid #ff82a966;
+    }
+  </style>
+</head>
+<body>
+ <header>
+  <h1>🌸 Swashakti</h1>
+  <button class="nav-toggle" aria-label="menu" onclick="toggleNav()">&#9776;</button>
+  <nav id="mainNav">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="login.html" id="loginButton">Login</a>
+  <a href="register.html" id="registerButton">Register</a>
+  <a href="order_history.html">Order History</a>
+  <a href="#" id="logoutButton" style="display:none;">Logout</a>
+</nav>
+
+
+</header>
+
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h2>Empowering Women Through Homemade Products</h2>
+      <p>Swashakti Market is a platform dedicated to talented <b>women entrepreneurs</b> crafting long shelf homemade products. Buy healthy, authentic, local items. Sell with ease as a Swashakti seller!</p>
+    </section>
+
+    <!-- Features Grid Section -->
+    <section style="margin:50px auto 30px auto; max-width:1100px;">
+      <h2 style="color:#ce6e8e; margin-bottom:22px; text-align:center; letter-spacing:1px; font-size:2em;">Why Swashakti?</h2>
+      <div class="feature-cards-grid">
+        <div class="feature-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1995/1995522.png" alt="Women"/>
+          <h3 style="color:#86dcef; font-size:1.14em; font-weight:700;">Women Led Marketplace</h3>
+          <div style="color:#e0d7dd; margin-top:9px;">100% sellers are women entrepreneurs creating home-crafted, long shelf products!</div>
+        </div>
+        <div class="feature-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/2356/2356928.png" alt="Quality"/>
+          <h3 style="color:#86dcef;font-size:1.14em; font-weight:700;">Authentic, Healthy, Local</h3>
+          <div style="color:#e0d7dd; margin-top:9px;">Every product is made with care, has long shelf life & supports Indian families.</div>
+        </div>
+        <div class="feature-card">
+          <img src="https://cdn-icons-png.flaticon.com/512/1826/1826665.png" alt="Easy"/>
+          <h3 style="color:#86dcef; font-size:1.14em; font-weight:700;">Easy to Use!</h3>
+          <div style="color:#e0d7dd; margin-top:9px;">Easy Registration, Upload, and Order management for both Sellers and Buyers.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section style="max-width:800px; margin:70px auto 32px auto; background:#1b122c; border-radius:18px; box-shadow:0 2px 26px #93a15810; padding:36px 34px;">
+      <h2 style="color:#ff82a9; font-size:1.37em; margin-bottom:12px; font-weight:700;">About Swashakti</h2>
+      <p style="color:#ecd7ed; font-size:1.09em;">Swashakti Market is a full-stack application created to support and promote women entrepreneurs. Users can register, login as seller/customer, upload products, manage orders, and experience a modern e-commerce UI — perfect for college mini project showcase.</p>
+      <ul style="color:#f7def7;margin-top:21px; margin-left:15px;">
+        <li>Simple registration for Sellers and Customers</li>
+        <li>Modern product browsing UI, responsive grid</li>
+        <li>Instant add to cart & order placement</li>
+        <li>Easy dashboard for sellers</li>
+      </ul>
+    </section>
+
+    <!-- Project Highlights/Testimonials -->
+    <section style="max-width:900px; margin:80px auto 40px auto; text-align:center;">
+      <h2 style="color:#ff82a9; margin-bottom:11px;font-size:1.37em;">Project Showcase Highlights</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:38px;justify-content:center;">
+        <div style="background:#201d38; border-radius:18px; padding:28px 25px; color:#f2b2de; font-weight:600; font-size:1.09em;box-shadow:0 2px 22px #ad79ff28;max-width:330px;">
+          <div>🚀 Rapid product upload and dashboard</div>
+          <div style="font-size:.98em;margin-top:7px;color:#eabbfa;">(Seller ka full CRUD + instant update!)</div>
+        </div>
+        <div style="background:#201d38; border-radius:18px; padding:28px 25px; color:#c5f6fa; font-weight:600; font-size:1.09em;box-shadow:0 2px 22px #ad79ff18;max-width:330px;">
+          <div>🛒 Smooth cart & order placement flow</div>
+          <div style="font-size:.98em;margin-top:7px;color:#80d1da;">(Buyers ke liye seamless experience!)</div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Contact/Support Section -->
+    <section style="background:#26183a; max-width:800px; margin:80px auto 50px auto; border-radius:16px; box-shadow:0 4px 22px #ff82a92c; padding:36px 32px; text-align:center;">
+      <h2 style="color:#ff82a9; font-size:1.24em; margin-bottom:12px; font-weight:700;">Contact & Support</h2>
+      <div style="color:#e5e3ea;font-size:1.08em;margin-bottom:13px;">For help or demo queries, contact project guide or use presentation mode.<br>Phone: +91 925912XXXX </div>
+      <br>
+      This team project is a labor of love by <b>Team Swashakti</b> — dedicated to showcasing our skills and passion for empowering women entrepreneurs through technology.
+        </div>
+      <div style="color:#dee2e7;font-size:1.02em;">Made by Team members of Swashakti <br>
+        <b>Aakti Chauhan, Aman Vats, Laksh Gupta, Neeshu Varma </b> 
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+  <p>© 2025 Swashakti | Made with Love and Care </p>
+  </footer>
+
+  <!-- Floating Help Icon -->
+  <div id="floatingHelpIcon" style="position:fixed; bottom:24px; right:28px; width:56px; height:56px; z-index:2200; background: linear-gradient(135deg,#3ec1d3 0%,#fffd80 100%); border-radius:50%; box-shadow:0 2px 8px #444; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:transform 0.1s;">
+    <svg width="32" height="32" viewBox="0 0 48 48"><circle cx="24" cy="24" r="23" fill="#fff" stroke="#3ec1d3" stroke-width="1"/><text x="50%" y="55%" text-anchor="middle" fill="#3ec1d3" font-size="22px" font-family="Arial" dy=".3em">?</text></svg>
+  </div>
+
+  <!-- help box Modal (full FAQ inside!) -->
+  <div id="helpModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); z-index:9999;">
+    <div style="background: linear-gradient(120deg,#fff 85%,#f3f9fc 100%); margin:40px auto; padding:32px 22px 26px 22px; max-width:410px; min-height:340px; border-radius:20px; box-shadow:0 4px 36px #3ec1d377,0 1.5px 8px #2223; position:relative; top:80px; font-family: 'Segoe UI', Arial, sans-serif; overflow-y:auto; max-height:78vh;">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <svg width="28" height="28" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#3ec1d3"/><text x="50%" y="55%" text-anchor="middle" fill="#fff" font-size="20px" font-family="Arial" dy=".3em">?</text></svg>
+        <h2 style="margin:0 0 8px 0;font-size:1.35rem;color:#18a0a9;font-weight:600;">How can we help?</h2>
+      </div>
+      <div style="margin-top:20px;">
+        <div style="background:#f1fafc;border-radius:14px;padding:11px 16px 11px 13px;margin-bottom:13px;box-shadow:0 1px 6px #a6e9eb18;">
+          <div style="font-size:1.03em;font-weight:600;color:#0874b6;margin-bottom:3px;">How to register?</div>
+          <div style="font-size:.96em;color:#666;">On Register page, fill name, email, password & role then submit.</div>
+          <div style="font-size:.96em;color:#444;"><b>Hindi:</b> [translate:रजिस्टर पेज पर नाम, ईमेल, पासवर्ड और रोल भरें, फिर सबमिट करें।]</div>
+          <div style="font-size:.96em;color:#222;margin-bottom:3px;"><b>Hinglish:</b> Register page pe saari detail daalo, role select karo, submit kar do!</div>
+        </div>
+        <div style="background:#eaf7f8;border-radius:14px;padding:11px 16px 11px 13px;margin-bottom:13px;box-shadow:0 1px 6px #a6e9eb12;">
+          <div style="font-size:1.03em;font-weight:600;color:#0874b6;margin-bottom:3px;">How to login?</div>
+          <div style="font-size:.96em;color:#666;">Go to Login page, enter registered email, password & role. Press submit.</div>
+          <div style="font-size:.96em;color:#444;"><b>Hindi:</b> [translate:लॉगिन पेज पर ईमेल, पासवर्ड, रोल भरें और सबमिट करें।]</div>
+          <div style="font-size:.96em;color:#222;margin-bottom:3px;"><b>Hinglish:</b> Login page pe login info daalo, role select karo, dashboard khulega!</div>
+        </div>
+        <div style="background:#f1fafc;border-radius:14px;padding:11px 16px 11px 13px;margin-bottom:13px;box-shadow:0 1px 6px #a6e9eb18;">
+          <div style="font-size:1.03em;font-weight:600;color:#0874b6;margin-bottom:3px;">How to use Seller Dashboard?</div>
+          <div style="font-size:.96em;color:#666;">After login as seller, dashboard menu pe "Add/View/Edit/Delete Product" features milte hain. Orders bhi track kar sakte ho.</div>
+          <div style="font-size:.96em;color:#444;"><b>Hindi:</b> [translate:सेलर लॉगइन करो, डैशबोर्ड पे प्रोडक्ट जोड़ो, देखो, एडिट या डिलीट करो, ऑर्डर भी देख सकते हो।]</div>
+          <div style="font-size:.96em;color:#222;margin-bottom:3px;"><b>Hinglish:</b> Seller login ke baad product & order wali options dashboard me milti hain.</div>
+        </div>
+        <div style="background:#eaf7f8;border-radius:14px;padding:11px 16px 11px 13px;margin-bottom:13px;box-shadow:0 1px 6px #a6e9eb12;">
+          <div style="font-size:1.03em;font-weight:600;color:#0874b6;margin-bottom:3px;">How to upload a product?</div>
+          <div style="font-size:.96em;color:#666;">Click "Add Product", fill name, description, price, image URL and submit.</div>
+          <div style="font-size:.96em;color:#444;"><b>Hindi:</b> [translate:ऐड प्रोडक्ट पे क्लिक करो, डिटेल्स भरो, इमेज लिंक डालो, सबमिट करो।]</div>
+          <div style="font-size:.96em;color:#222;margin-bottom:3px;"><b>Hinglish:</b> Add Product dabake, saari info daal do, bas ho gaya!</div>
+        </div>
+        <div style="background:#f1fafc;border-radius:14px;padding:11px 16px 11px 13px;margin-bottom:13px;box-shadow:0 1px 6px #a6e9eb18;">
+          <div style="font-size:1.03em;font-weight:600;color:#0874b6;margin-bottom:3px;">How to edit/delete a product?</div>
+          <div style="font-size:.96em;color:#666;">Dashboard par product ke pass Edit/Delete button hote hain — click & manage karo.</div>
+          <div style="font-size:.96em;color:#444;"><b>Hindi:</b> [translate:डैशबोर्ड पर हर प्रोडक्ट के साथ एडिट/डिलीट बटन दिखता है, उसी से मैनेज करें।]</div>
+          <div style="font-size:.96em;color:#222;margin-bottom:3px;"><b>Hinglish:</b> Edit ya Delete wale button dabao, turant kaam ho jayega.</div>
+        </div>
+        <div style="background:#eaf7f8;border-radius:14px;padding:11px 16px 11px 13px;margin-bottom:13px;box-shadow:0 1px 6px #a6e9eb12;">
+          <div style="font-size:1.03em;font-weight:600;color:#0874b6;margin-bottom:3px;">Is FSSAI license compulsory?</div>
+          <div style="font-size:.96em;color:#666;">Packaged food ke liye real business me license zaruri, lekin demo/project ke liye optional hai.</div>
+          <div style="font-size:.96em;color:#444;"><b>Hindi:</b> [translate:पैकेज्ड फूड को ऑनलाइन बेचने में FSSAI लाइसेंस जरूरी है, डेमो के लिए नहीं।]</div>
+          <div style="font-size:.96em;color:#222;margin-bottom:3px;"><b>Hinglish:</b> Real sale ke liye license lo, college project/demo ke liye koi chinta nahi.</div>
+        </div>
+        <div style="background:#f1fafc;border-radius:14px;padding:11px 16px 11px 13px;margin-bottom:13px;box-shadow:0 1px 6px #a6e9eb18;">
+          <div style="font-size:1.03em;font-weight:600;color:#0874b6;margin-bottom:3px;">How can customer order?</div>
+          <div style="font-size:.96em;color:#666;">Add product to cart, then place order. Track order in Order History.</div>
+          <div style="font-size:.96em;color:#444;"><b>Hindi:</b> [translate:कार्ट में प्रोडक्ट डालो, ऑर्डर प्लेस करो, फिर ऑर्डर हिस्ट्री में ट्रैक करो।]</div>
+          <div style="font-size:.96em;color:#222;margin-bottom:3px;"><b>Hinglish:</b> Cart me product dalo, place order dabao, order track bhi ho jayega.</div>
+        </div>
+        <div style="background:#eaf7f8;border-radius:14px;padding:11px 16px 11px 13px;margin-bottom:13px;box-shadow:0 1px 6px #a6e9eb12;">
+          <div style="font-size:1.03em;font-weight:600;color:#0874b6;margin-bottom:3px;">How to check order history?</div>
+          <div style="font-size:.96em;color:#666;">Main menu/dash se “Order History” page pe jao, purane orders dikh jayenge.</div>
+          <div style="font-size:.96em;color:#444;"><b>Hindi:</b> [translate:मेनू या डैशबोर्ड में ऑर्डर हिस्ट्री देखें, पुराना ऑर्डर मिल जाएगा।]</div>
+          <div style="font-size:.96em;color:#222;margin-bottom:3px;"><b>Hinglish:</b> Dashboard wala Order History try karo, full details mil jayengi.</div>
+        </div>
+        <div style="background:#f1fafc;border-radius:14px;padding:11px 16px 11px 13px;margin-bottom:13px;box-shadow:0 1px 6px #a6e9eb18;">
+          <div style="font-size:1.03em;font-weight:600;color:#0874b6;margin-bottom:3px;">Data safe hai?</div>
+          <div style="font-size:.96em;color:#666;">Demo/project ke liye hi data use hota hai, public share nahi hota.</div>
+          <div style="font-size:.96em;color:#444;"><b>Hindi:</b> [translate:आम प्रोजेक्ट/डेमो यूज़ के लिए है, डेटा कहीं बाहर नहीं जाता।]</div>
+          <div style="font-size:.96em;color:#222;margin-bottom:3px;"><b>Hinglish:</b> Tera data safe, public me nahi jayega — sirf demo ke liye!</div>
+        </div>
+        <div style="background:#eaf7f8;border-radius:14px;padding:11px 16px 11px 13px;box-shadow:0 1px 6px #a6e9eb12;">
+          <div style="font-size:1.03em;font-weight:600;color:#0874b6;margin-bottom:3px;">Extra help chahiye?</div>
+          <div style="font-size:.96em;color:#666;">Contact team/instructor, ya video guide dekho. (Feature soon!)</div>
+          <div style="font-size:.96em;color:#444;"><b>Hindi:</b> [translate:टीम/गाइड से मदद लो, या वीडियो ट्यूटोरियल देखें।]</div>
+          <div style="font-size:.96em;color:#222;"><b>Hinglish:</b> Pareshan ho toh instructor ya video se dekh lo!</div>
+        </div>
+      </div>
+      <button id="closeHelpModal" style="margin-top:18px; padding:9px 28px; font-size:1rem; font-weight:600; border:none; border-radius:7px; background:#3ec1d3; color:#fff; float:right; box-shadow:0 2px 8px #13778844; transition:box-shadow .14s; cursor:pointer;"
+        onmouseover="this.style.background='#07b0d4'" 
+        onmouseout="this.style.background='#3ec1d3'">Close</button>
+    </div>
+  </div>
+
+  <!-- Help Modal JS Logic -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var helpIcon = document.getElementById("floatingHelpIcon");
+    var helpModal = document.getElementById("helpModal");
+    if(helpIcon && helpModal) {
+      helpIcon.onclick = function() {
+        helpModal.style.display = "block";
+      };
+    }
+    var closeBtn = document.getElementById("closeHelpModal");
+    if(closeBtn) {
+      closeBtn.onclick = function() {
+        helpModal.style.display = "none";
+      };
+    }
+    helpModal.onclick = function(e) {
+      if (e.target === helpModal) {
+        helpModal.style.display = "none";
+      }
+    };
+  });
+  </script>
+  <script src="script.js"></script>
+  <script>
+function toggleNav() {
+  var nav = document.getElementById('mainNav');
+  nav.classList.toggle('show');
+}
+document.addEventListener("DOMContentLoaded", function() {
+  var nav = document.getElementById('mainNav');
+  var links = nav.querySelectorAll('a');
+  links.forEach(link => link.onclick = () => { nav.classList.remove('show'); });
+});
+</script>
+</body>
+</html>
+
+<!-- github sync test -->

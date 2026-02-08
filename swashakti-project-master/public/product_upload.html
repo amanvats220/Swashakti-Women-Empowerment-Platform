@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Upload Product - Swashakti</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🌸 Swashakti - Upload Product</h1>
+    <nav>
+      <!-- <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="login.html">Login</a>
+      <a href="register.html">Register</a> -->
+    </nav>
+  </header>
+
+  <main>
+    <section class="auth-container">
+      <h2>Product Upload</h2>
+      <form id="productUploadForm">
+        <label>Product Name:</label>
+        <input type="text" id="name" placeholder="Enter product name" required />
+
+        <label>Description:</label>
+        <textarea id="description" placeholder="Write description"></textarea>
+
+        <label>Price:</label>
+        <input type="number" id="price" placeholder="Enter price" required />
+
+        <label>Image URL:</label>
+        <input type="text" id="image_url" placeholder="Enter image URL" />
+
+
+        <button type="submit">Upload Product</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Swashakti | Made with 💖</p>
+  </footer>
+
+  <script src="product.js"></script>
+  <script src="nav.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', loadNavigation);
+</script>
+<!-- Floating Help Icon -->
+<div id="floatingHelpIcon" style="
+  position:fixed;
+  bottom:24px; right:28px;
+  width:56px; height:56px;
+  z-index:2200;
+  background: linear-gradient(135deg,#3ec1d3 0%,#fffd80 100%);
+  border-radius:50%; box-shadow:0 2px 8px #444;
+  display:flex; align-items:center; justify-content:center;
+  cursor:pointer; transition:transform 0.1s;
+">
+  <svg width="32" height="32" viewBox="0 0 48 48"><circle cx="24" cy="24" r="23" fill="#fff" stroke="#3ec1d3" stroke-width="1"/><text x="50%" y="55%" text-anchor="middle" fill="#3ec1d3" font-size="22px" font-family="Arial" dy=".3em">?</text></svg>
+</div>
+
+<!-- FAQ Modal -->
+<div id="helpModal" style="
+  display:none; position:fixed; top:0; left:0;
+  width:100vw; height:100vh; background:rgba(0,0,0,0.4); z-index:9999;">
+  <div style="
+    background: linear-gradient(120deg,#fff 85%,#f3f9fc 100%);
+    margin:40px auto;
+    padding:32px 22px 26px 22px;
+    max-width:410px; min-height:340px;
+    border-radius:20px;
+    box-shadow:0 4px 36px #3ec1d377,0 1.5px 8px #2223;
+    position:relative; top:80px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    overflow-y:auto;
+    max-height:78vh;
+  ">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <svg width="28" height="28" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" fill="#3ec1d3"/><text x="50%" y="55%" text-anchor="middle" fill="#fff" font-size="20px" font-family="Arial" dy=".3em">?</text></svg>
+      <h2 style="margin:0 0 8px 0;font-size:1.35rem;color:#18a0a9;font-weight:600;">How can we help?</h2>
+    </div>
+    <div style="margin-top:20px;">
+      <!-- 1 -->
+      <div style="background:#f1fafc;border-radius:14px;padding:11px 16px 11px 13px;margin-bottom:13px;box-shadow:0 1px 6px #a6e9eb18;">
+        <div style="font-size:1.03em;font-weight:600;color:#0874b6;margin-bottom:3px;">How to register?</div>
+        <div style="font-size:.96em;color:#666;">On Register page, fill name, email, password & role then submit.</div>
+        <div style="font-size:.96em;color:#444;"><b>Hindi:</b> [translate:रजिस्टर पेज पर नाम, ईमेल, पासवर्ड और रोल भरें, फिर सबमिट करें।]</div>
+        <div style="font-size:.96em;color:#222;margin-bottom:3px;"><b>Hinglish:</b> Register page pe saari detail daalo, role select karo, submit kar do!</div>
+      </div>
+      <!-- 2 -->
+      <div style="background:#eaf7f8;border-radius:14px;padding:11px 16px 11px 13px;margin-bottom:13px;box-shadow:0 1px 6px #a6e9eb12;">
+        <div style="font-size:1.03em;font-weight:600;color:#0874b6;margin-bottom:3px;">How to login?</div>
+        <div style="font-size:.96em;color:#666;">Go to Login page, enter registered email, password & role. Press submit.</div>
+        <div style="font-size:.96em;color:#444;"><b>Hindi:</b> [translate:लॉगिन पेज पर ईमेल, पासवर्ड, रोल भरें और सबमिट करें।]</div>
+        <div style="font-size:.96em;color:#222;margin-bottom:3px;"><b>Hinglish:</b> Login page pe login info daalo, role select karo, dashboard khulega!</div>
+      </div>
+      <!-- 3 -->
+      <div style="background:#f1fafc;border-radius:14px;padding:11px 16px 11px 13px;margin-bottom:13px;box-shadow:0 1px 6px #a6e9eb18;">
+        <div style="font-size:1.03em;font-weight:600;color:#0874b6;margin-bottom:3px;">How to use Seller Dashboard?</div>
+        <div style="font-size:.96em;color:#666;">After login as seller, dashboard menu pe "Add/View/Edit/Delete Product" features milte hain. Orders bhi track kar sakte ho.</div>
+        <div style="font-size:.96em;color:#444;"><b>Hindi:</b> [translate:सेलर लॉगइन करो, डैशबोर्ड पे प्रोडक्ट जोड़ो, देखो, एडिट या डिलीट करो, आर्डर भी देख सकते हो।]</div>
+        <div style="font-size:.96em;color:#222;margin-bottom:3px;"><b>Hinglish:</b> Seller login ke baad product & order wali options dashboard me milti hain.</div>
+      </div>
+      <!-- 4 -->
+      <div style="background:#eaf7f8;border-radius:14px;padding:11px 16px 11px 13px;margin-bottom:13px;box-shadow:0 1px 6px #a6e9eb12;">
+        <div style="font-size:1.03em;font-weight:600;color:#0874b6;margin-bottom:3px;">How to upload a product?</div>
+        <div style="font-size:.96em;color:#666;">Click "Add Product", fill name, description, price, image URL and submit.</div>
+        <div style="font-size:.96em;color:#444;"><b>Hindi:</b> [translate:ऐड प्रोडक्ट पे क्लिक करो, डिटेल्स भरो, इमेज लिंक डालो, सबमिट करो।]</div>
+        <div style="font-size:.96em;color:#222;margin-bottom:3px;"><b>Hinglish:</b> Add Product dabake, saari info daal do, bas ho gaya!</div>
+      </div>
+      <!-- 5 -->
+      <div style="background:#f1fafc;border-radius:14px;padding:11px 16px 11px 13px;margin-bottom:13px;box-shadow:0 1px 6px #a6e9eb18;">
+        <div style="font-size:1.03em;font-weight:600;color:#0874b6;margin-bottom:3px;">How to edit/delete a product?</div>
+        <div style="font-size:.96em;color:#666;">Dashboard par product ke pass Edit/Delete button hote hain — click & manage karo.</div>
+        <div style="font-size:.96em;color:#444;"><b>Hindi:</b> [translate:डैशबोर्ड पर हर प्रोडक्ट के साथ एडिट/डिलीट बटन दिखता है, उसी से मैनेज करें।]</div>
+        <div style="font-size:.96em;color:#222;margin-bottom:3px;"><b>Hinglish:</b> Edit ya Delete wale button dabao, turant kaam ho jayega.</div>
+      </div>
+      <!-- 6 -->
+      <div style="background:#eaf7f8;border-radius:14px;padding:11px 16px 11px 13px;margin-bottom:13px;box-shadow:0 1px 6px #a6e9eb12;">
+        <div style="font-size:1.03em;font-weight:600;color:#0874b6;margin-bottom:3px;">Is FSSAI license compulsory?</div>
+        <div style="font-size:.96em;color:#666;">Packaged food ke liye real business me license zaruri, lekin demo/project ke liye optional hai.</div>
+        <div style="font-size:.96em;color:#444;"><b>Hindi:</b> [translate:पैकेज्ड फूड को ऑनलाइन बेचने में FSSAI लाइसेंस जरूरी है, डेमो के लिए नहीं।]</div>
+        <div style="font-size:.96em;color:#222;margin-bottom:3px;"><b>Hinglish:</b> Real sale ke liye license lo, college project/demo ke liye koi chinta nahi.</div>
+      </div>
+      <!-- 7 -->
+      <div style="background:#f1fafc;border-radius:14px;padding:11px 16px 11px 13px;margin-bottom:13px;box-shadow:0 1px 6px #a6e9eb18;">
+        <div style="font-size:1.03em;font-weight:600;color:#0874b6;margin-bottom:3px;">How can customer order?</div>
+        <div style="font-size:.96em;color:#666;">Add product to cart, then place order. Track order in Order History.</div>
+        <div style="font-size:.96em;color:#444;"><b>Hindi:</b> [translate:कार्ट में प्रोडक्ट डालो, ऑर्डर प्लेस करो, फिर ऑर्डर हिस्ट्री में ट्रैक करो।]</div>
+        <div style="font-size:.96em;color:#222;margin-bottom:3px;"><b>Hinglish:</b> Cart me product dalo, place order dabao, order track bhi ho jayega.</div>
+      </div>
+      <!-- 8 -->
+      <div style="background:#eaf7f8;border-radius:14px;padding:11px 16px 11px 13px;margin-bottom:13px;box-shadow:0 1px 6px #a6e9eb12;">
+        <div style="font-size:1.03em;font-weight:600;color:#0874b6;margin-bottom:3px;">How to check order history?</div>
+        <div style="font-size:.96em;color:#666;">Main menu/dash se “Order History” page pe jao, purane orders dikh jayenge.</div>
+        <div style="font-size:.96em;color:#444;"><b>Hindi:</b> [translate:मेनू या डैशबोर्ड में ऑर्डर हिस्ट्री देखें, पुराना ऑर्डर मिल जाएगा।]</div>
+        <div style="font-size:.96em;color:#222;margin-bottom:3px;"><b>Hinglish:</b> Dashboard wala Order History try karo, full details mil jayengi.</div>
+      </div>
+      <!-- 9 -->
+      <div style="background:#f1fafc;border-radius:14px;padding:11px 16px 11px 13px;margin-bottom:13px;box-shadow:0 1px 6px #a6e9eb18;">
+        <div style="font-size:1.03em;font-weight:600;color:#0874b6;margin-bottom:3px;">Data safe hai?</div>
+        <div style="font-size:.96em;color:#666;">Demo/project ke liye hi data use hota hai, public share nahi hota.</div>
+        <div style="font-size:.96em;color:#444;"><b>Hindi:</b> [translate:आम प्रोजेक्ट/डेमो यूज़ के लिए है, डेटा कहीं बाहर नहीं जाता।]</div>
+        <div style="font-size:.96em;color:#222;margin-bottom:3px;"><b>Hinglish:</b> Tera data safe, public me nahi jayega — sirf demo ke liye!</div>
+      </div>
+      <!-- 10 -->
+      <div style="background:#eaf7f8;border-radius:14px;padding:11px 16px 11px 13px;box-shadow:0 1px 6px #a6e9eb12;">
+        <div style="font-size:1.03em;font-weight:600;color:#0874b6;margin-bottom:3px;">Extra help chahiye?</div>
+        <div style="font-size:.96em;color:#666;">Contact team/instructor, ya video guide dekho. (Feature soon!)</div>
+        <div style="font-size:.96em;color:#444;"><b>Hindi:</b> [translate:टीम/गाइड से मदद लो, या वीडियो ट्यूटोरियल देखें।]</div>
+        <div style="font-size:.96em;color:#222;"><b>Hinglish:</b> Pareshan ho toh instructor ya video se dekh lo!</div>
+      </div>
+    </div>
+    <button id="closeHelpModal" style="margin-top:18px; padding:9px 28px; font-size:1rem; font-weight:600; border:none; border-radius:7px; background:#3ec1d3; color:#fff; float:right; box-shadow:0 2px 8px #13778844; transition:box-shadow .14s; cursor:pointer;"
+      onmouseover="this.style.background='#07b0d4'" 
+      onmouseout="this.style.background='#3ec1d3'">Close</button>
+  </div>
+</div>
+
+
+
+</body>
+</html>
